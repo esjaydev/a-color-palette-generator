@@ -125,12 +125,12 @@ main {
 
 .colorBox:hover {
     transform: scale(1.025);
-    transition: 250ms;
+/*     transition: 250ms; */
 }
 
 .colorBox:active {
     transform: translateY(5px);
-    transition: 0ms;
+/*     transition: 0ms; */
 }
 
 #mainColor {
