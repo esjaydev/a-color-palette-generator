@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+		rel="stylesheet" />
+	<title>A Color Palette Generator</title>
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align: center">A Color Palette Generator</h1>
+	</header>
+	<main>
+		<span class="colorBox" id="complementaryA">
+			<p class="col-label">HEX</p>
+			<p class="color-hex"></p>
+			<p class="col-label">RGB</p>
+			<p class="color-rgb"></p>
+		</span>
+		<span class="colorBox" id="secondaryColor">
+			<p class="col-label">HEX</p>
+			<p class="color-hex"></p>
+			<p class="col-label">RGB</p>
+			<p class="color-rgb"></p>
+		</span>
+		<span class="colorBox" id="mainColor">
+			<p class="col-label">HEX</p>
+			<p class="color-hex"></p>
+			<p class="col-label">RGB</p>
+			<p class="color-rgb"></p>
+		</span>
+		<span class="colorBox" id="terciaryColor">
+			<p class="col-label">HEX</p>
+			<p class="color-hex"></p>
+			<p class="col-label">RGB</p>
+			<p class="color-rgb"></p>
+		</span>
+		<span class="colorBox" id="complementaryB">
+			<p class="col-label">HEX</p>
+			<p class="color-hex"></p>
+			<p class="col-label">RGB</p>
+			<p class="color-rgb"></p>
+		</span>
+	</main>
+	<div class="browseButtons">
+		<button id="backColor">⬅️</button>
+		<button id="newColor">🎨</button>
+		<button id="nextColor">➡️</button>
+	</div>
+	<div class="record" id="recordSection">
+	</div>
+	<div id="successCopy">
+		<p style="text-align: center;">Color copied succesfully.</p>
+	</div>
+	<footer>
+		<p style="color: gray; text-align: center;">A Color Palette Generator v1.0 - A coding exercise by <a href="#">esjaydev</a>.</p>
+	</footer>
+</body>
+<script src="./scripts.js"></script>
+
+</html>

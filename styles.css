@@ -1,0 +1,312 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    10. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* ---------------------------------- */
+
+:root {
+    --black: rgb(32, 32, 32);
+}
+
+/* * {
+    cursor: url('custom_mouse.svg'), default;
+} */
+
+body {
+    font-family: "Hubot Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h1 {
+    --pageWidth: 800px;
+    color: var(--black);
+    font-size: 36px;
+    word-break: keep-all;
+}
+
+header {
+    margin: 2rem 1rem 0 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+    height: 500px;
+}
+
+.colorBox {
+    width: 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.colorBox:hover {
+    transform: scale(1.025);
+    transition: 250ms;
+}
+
+.colorBox:active {
+    transform: translateY(5px);
+    transition: 0ms;
+}
+
+#mainColor {
+    background-color: gray;
+}
+
+#secondaryColor {
+    background-color: rgb(190, 190, 190);
+}
+
+#terciaryColor {
+    background-color: rgb(226, 226, 226);
+}
+
+#complementaryA {
+    background-color: rgb(61, 61, 61);
+}
+
+#complementaryB {
+    background-color: rgb(53, 53, 53);
+}
+
+@media (width < 850px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        height: auto;
+    }
+
+    .colorBox {
+        width: 100%;
+    }
+
+    #mainColor {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    #secondaryColor {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #terciaryColor {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    #complementaryA {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #complementaryB {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+}
+
+.col-label {
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 0.75rem;
+}
+
+.color-hex {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.color-rgb {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.record {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.color-group {
+    min-width: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.color-group:hover {
+    scale: 0.9;
+}
+
+.color-group:active {
+    transform: translateY(10px);
+}
+
+.color-group>* {
+    width: 100%;
+    display: block;
+}
+
+.rec-mainColor {
+    height: 50px;
+    background-color: red;
+}
+
+.rec-secondaryColor {
+    height: 30px;
+    background-color: blue;
+}
+
+.rec-terciaryColor {
+    height: 30px;
+    background-color: lightblue;
+}
+
+.rec-complementaryA {
+    height: 15px;
+    background-color: green;
+}
+
+.rec-complementaryB {
+    height: 15px;
+    background-color: lightgreen;
+}
+
+.browseButtons {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.browseButtons>* {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+}
+
+.browseButtons>*:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+.browseButtons>*:active {
+    transform: scale(0.95);
+}
+
+#newColor {
+    background: #e86443;
+    background: linear-gradient(90deg, rgba(232, 100, 67, 1) 0%, rgba(240, 202, 79, 1) 29%, rgba(68, 201, 197, 1) 50%, rgba(61, 132, 255, 1) 74%, rgba(237, 83, 232, 1) 100%);
+}
+
+#newColor:hover {
+    background: #f29d88;
+    background: linear-gradient(90deg, rgba(242, 157, 136, 1) 0%, rgba(255, 228, 140, 1) 29%, rgba(116, 214, 211, 1) 50%, rgba(133, 177, 255, 1) 74%, rgba(255, 158, 252, 1) 100%);
+}
+
+#successCopy {
+    width: 100%;
+    position: fixed;
+    bottom: -6vh;
+    background-color: rgba(128, 128, 128, 0.402);
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    height: 6vh;
+    transition: 250ms;
+}
